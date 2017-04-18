@@ -14,6 +14,9 @@
 		DFF71D021EA691B90023A7DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF71D001EA691B90023A7DE /* LaunchScreen.storyboard */; };
 		DFF71D0D1EA691BA0023A7DE /* StopWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF71D0C1EA691BA0023A7DE /* StopWatchTests.swift */; };
 		DFF71D181EA691BA0023A7DE /* StopWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF71D171EA691BA0023A7DE /* StopWatchUITests.swift */; };
+		DFF71D271EA6922D0023A7DE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF71D261EA6922D0023A7DE /* MapKit.framework */; };
+		DFF71D2F1EA695F90023A7DE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF71D2D1EA695F10023A7DE /* CoreLocation.framework */; };
+		DFF71D331EA69FB60023A7DE /* teste.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF71D321EA69FB60023A7DE /* teste.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,10 @@
 		DFF71D131EA691BA0023A7DE /* StopWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StopWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF71D171EA691BA0023A7DE /* StopWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchUITests.swift; sourceTree = "<group>"; };
 		DFF71D191EA691BA0023A7DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFF71D261EA6922D0023A7DE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DFF71D281EA693D00023A7DE /* StopWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StopWatch.entitlements; sourceTree = "<group>"; };
+		DFF71D2D1EA695F10023A7DE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DFF71D321EA69FB60023A7DE /* teste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teste.png; path = ../../teste.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF71D2F1EA695F90023A7DE /* CoreLocation.framework in Frameworks */,
+				DFF71D271EA6922D0023A7DE /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 				DFF71D0B1EA691BA0023A7DE /* StopWatchTests */,
 				DFF71D161EA691BA0023A7DE /* StopWatchUITests */,
 				DFF71CF51EA691B90023A7DE /* Products */,
+				DFF71D251EA6922D0023A7DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +107,14 @@
 		DFF71CF61EA691B90023A7DE /* StopWatch */ = {
 			isa = PBXGroup;
 			children = (
+				DFF71D281EA693D00023A7DE /* StopWatch.entitlements */,
 				DFF71CF71EA691B90023A7DE /* AppDelegate.swift */,
 				DFF71CF91EA691B90023A7DE /* ViewController.swift */,
 				DFF71CFB1EA691B90023A7DE /* Main.storyboard */,
 				DFF71CFE1EA691B90023A7DE /* Assets.xcassets */,
 				DFF71D001EA691B90023A7DE /* LaunchScreen.storyboard */,
 				DFF71D031EA691B90023A7DE /* Info.plist */,
+				DFF71D321EA69FB60023A7DE /* teste.png */,
 			);
 			path = StopWatch;
 			sourceTree = "<group>";
@@ -123,6 +135,15 @@
 				DFF71D191EA691BA0023A7DE /* Info.plist */,
 			);
 			path = StopWatchUITests;
+			sourceTree = "<group>";
+		};
+		DFF71D251EA6922D0023A7DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFF71D2D1EA695F10023A7DE /* CoreLocation.framework */,
+				DFF71D261EA6922D0023A7DE /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +214,19 @@
 				TargetAttributes = {
 					DFF71CF31EA691B90023A7DE = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 2T5EDNE3Z5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					DFF71D071EA691BA0023A7DE = {
 						CreatedOnToolsVersion = 8.3.1;
@@ -233,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF71D021EA691B90023A7DE /* LaunchScreen.storyboard in Resources */,
+				DFF71D331EA69FB60023A7DE /* teste.png in Resources */,
 				DFF71CFF1EA691B90023A7DE /* Assets.xcassets in Resources */,
 				DFF71CFD1EA691B90023A7DE /* Main.storyboard in Resources */,
 			);
@@ -414,11 +448,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2T5EDNE3Z5;
 				INFOPLIST_FILE = StopWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.StopWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -426,11 +462,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2T5EDNE3Z5;
 				INFOPLIST_FILE = StopWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.StopWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
