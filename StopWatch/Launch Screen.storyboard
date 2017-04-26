@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg0-2A-HMX">
+                                <rect key="frame" x="0.0" y="-1" width="375" height="668"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlQ-tx-nKM">
+                                        <rect key="frame" x="26" y="366" width="323" height="21"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Accessible geolocation alarm for everyone">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.44086140394210815" green="0.86788409948348999" blue="0.86996644735336304" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="17" name="Exo-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="teste" translatesAutoresizingMaskIntoConstraints="NO" id="PvT-6e-1fG">
+                                        <rect key="frame" x="67" y="259" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.086971260607242584" green="0.16353806853294373" blue="0.23007398843765259" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="PvT-6e-1fG" firstAttribute="centerY" secondItem="bg0-2A-HMX" secondAttribute="centerY" id="Foh-3Y-D3N"/>
+                                    <constraint firstItem="PvT-6e-1fG" firstAttribute="centerX" secondItem="bg0-2A-HMX" secondAttribute="centerX" id="Sc3-Wz-9EY"/>
+                                    <constraint firstAttribute="trailing" secondItem="PvT-6e-1fG" secondAttribute="trailing" constant="68" id="dAh-UC-FI2"/>
+                                    <constraint firstItem="XlQ-tx-nKM" firstAttribute="top" secondItem="PvT-6e-1fG" secondAttribute="bottom" constant="-32" id="gP8-3r-5Sp"/>
+                                    <constraint firstItem="PvT-6e-1fG" firstAttribute="leading" secondItem="bg0-2A-HMX" secondAttribute="leading" constant="67" id="ycC-rz-xJ8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bg0-2A-HMX" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="7k6-Jm-qan"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="PvT-6e-1fG" secondAttribute="bottom" constant="270" id="M2G-rg-TY5"/>
+                            <constraint firstItem="bg0-2A-HMX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="RQa-12-viR"/>
+                            <constraint firstItem="PvT-6e-1fG" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="249" id="Sa0-Y5-yJT"/>
+                            <constraint firstAttribute="trailing" secondItem="bg0-2A-HMX" secondAttribute="trailing" id="npN-qz-fVg"/>
+                            <constraint firstItem="XlQ-tx-nKM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tMV-3K-j11"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="teste" width="727" height="187"/>
+    </resources>
+</document>

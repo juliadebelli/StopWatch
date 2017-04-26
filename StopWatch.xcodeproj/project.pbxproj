@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFC742CE1EAFE4B600310B77 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC742CD1EAFE4B600310B77 /* Launch Screen.storyboard */; };
 		DFF71CF81EA691B90023A7DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF71CF71EA691B90023A7DE /* AppDelegate.swift */; };
 		DFF71CFA1EA691B90023A7DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF71CF91EA691B90023A7DE /* ViewController.swift */; };
 		DFF71CFD1EA691B90023A7DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF71CFB1EA691B90023A7DE /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		DFF71D181EA691BA0023A7DE /* StopWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF71D171EA691BA0023A7DE /* StopWatchUITests.swift */; };
 		DFF71D271EA6922D0023A7DE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF71D261EA6922D0023A7DE /* MapKit.framework */; };
 		DFF71D2F1EA695F90023A7DE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF71D2D1EA695F10023A7DE /* CoreLocation.framework */; };
-		DFF71D331EA69FB60023A7DE /* teste.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF71D321EA69FB60023A7DE /* teste.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DFC742CD1EAFE4B600310B77 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		DFF71CF41EA691B90023A7DE /* StopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF71CF71EA691B90023A7DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFF71CF91EA691B90023A7DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		DFF71D261EA6922D0023A7DE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DFF71D281EA693D00023A7DE /* StopWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StopWatch.entitlements; sourceTree = "<group>"; };
 		DFF71D2D1EA695F10023A7DE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		DFF71D321EA69FB60023A7DE /* teste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teste.png; path = ../../teste.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +111,10 @@
 				DFF71CF71EA691B90023A7DE /* AppDelegate.swift */,
 				DFF71CF91EA691B90023A7DE /* ViewController.swift */,
 				DFF71CFB1EA691B90023A7DE /* Main.storyboard */,
+				DFC742CD1EAFE4B600310B77 /* Launch Screen.storyboard */,
 				DFF71CFE1EA691B90023A7DE /* Assets.xcassets */,
 				DFF71D001EA691B90023A7DE /* LaunchScreen.storyboard */,
 				DFF71D031EA691B90023A7DE /* Info.plist */,
-				DFF71D321EA69FB60023A7DE /* teste.png */,
 			);
 			path = StopWatch;
 			sourceTree = "<group>";
@@ -266,8 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF71D021EA691B90023A7DE /* LaunchScreen.storyboard in Resources */,
-				DFF71D331EA69FB60023A7DE /* teste.png in Resources */,
 				DFF71CFF1EA691B90023A7DE /* Assets.xcassets in Resources */,
+				DFC742CE1EAFE4B600310B77 /* Launch Screen.storyboard in Resources */,
 				DFF71CFD1EA691B90023A7DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +545,7 @@
 				DFF71D1E1EA691BA0023A7DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DFF71D1F1EA691BA0023A7DE /* Build configuration list for PBXNativeTarget "StopWatchTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +554,7 @@
 				DFF71D211EA691BA0023A7DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DFF71D221EA691BA0023A7DE /* Build configuration list for PBXNativeTarget "StopWatchUITests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +563,7 @@
 				DFF71D241EA691BA0023A7DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

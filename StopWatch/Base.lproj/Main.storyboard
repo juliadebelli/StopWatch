@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,14 +38,14 @@
                                     <navigationItem id="mcD-m3-aDe"/>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teste.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Jn-8t-gdo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teste" translatesAutoresizingMaskIntoConstraints="NO" id="7Jn-8t-gdo">
                                 <rect key="frame" x="138" y="22" width="99" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="99" id="gCl-BM-uNi"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IY9-UC-bVi">
-                                <rect key="frame" x="111" y="83" width="164" height="30"/>
+                                <rect key="frame" x="16" y="83" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -53,13 +53,31 @@
                                     <action selector="getDestiny:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="L3x-si-Cw7"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSS-EZ-ZfV">
+                                <rect key="frame" x="16" y="191" width="342" height="285"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Tap anywhere to enter your destination">
+                                        <attributes>
+                                            <color key="NSColor" red="0.090196078431372548" green="0.16470588235294117" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="34" name="Exo-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="IY9-UC-bVi" secondAttribute="trailing" id="1tS-ZE-uP2"/>
+                            <constraint firstItem="PSS-EZ-ZfV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5WJ-ds-r0A"/>
                             <constraint firstAttribute="trailing" secondItem="EV4-8H-dDk" secondAttribute="trailing" id="Be2-ue-oS4"/>
                             <constraint firstItem="0Lu-X1-LsB" firstAttribute="top" secondItem="IY9-UC-bVi" secondAttribute="bottom" constant="-49" id="D4t-mc-i9N"/>
-                            <constraint firstItem="IY9-UC-bVi" firstAttribute="centerX" secondItem="0Lu-X1-LsB" secondAttribute="centerX" constant="5.5" id="EoI-JU-PVg"/>
-                            <constraint firstItem="IY9-UC-bVi" firstAttribute="leading" secondItem="0Lu-X1-LsB" secondAttribute="trailing" constant="-264" id="Kdh-rm-7X3"/>
+                            <constraint firstItem="PSS-EZ-ZfV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="E0W-8c-BQP"/>
+                            <constraint firstItem="IY9-UC-bVi" firstAttribute="centerX" secondItem="0Lu-X1-LsB" secondAttribute="centerX" id="EoI-JU-PVg"/>
+                            <constraint firstItem="IY9-UC-bVi" firstAttribute="leading" secondItem="0Lu-X1-LsB" secondAttribute="trailing" constant="-359" id="Kdh-rm-7X3"/>
+                            <constraint firstItem="PSS-EZ-ZfV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OT7-Y2-Tv6"/>
                             <constraint firstItem="EV4-8H-dDk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TkT-0W-pjm"/>
                             <constraint firstItem="7Jn-8t-gdo" firstAttribute="width" secondItem="EV4-8H-dDk" secondAttribute="height" multiplier="9:4" id="XZr-F0-J5a"/>
                             <constraint firstItem="EV4-8H-dDk" firstAttribute="leading" secondItem="0Lu-X1-LsB" secondAttribute="leading" id="Yg6-nN-Gpf"/>
@@ -67,6 +85,7 @@
                             <constraint firstItem="EV4-8H-dDk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="aou-T1-nNt"/>
                             <constraint firstItem="7Jn-8t-gdo" firstAttribute="centerY" secondItem="EV4-8H-dDk" secondAttribute="centerY" id="beR-dy-dCm"/>
                             <constraint firstItem="EV4-8H-dDk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bf0-ne-zCh"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="IY9-UC-bVi" secondAttribute="leading" id="eO6-VA-FE4"/>
                             <constraint firstItem="7Jn-8t-gdo" firstAttribute="centerX" secondItem="EV4-8H-dDk" secondAttribute="centerX" id="fGm-Xo-lbR"/>
                             <constraint firstItem="0Lu-X1-LsB" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="g39-xZ-kRN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IY9-UC-bVi" secondAttribute="bottom" constant="554" id="ghH-ae-zXW"/>
@@ -79,6 +98,8 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="0Lu-X1-LsB" id="1qp-1p-ZS9"/>
+                        <outlet property="textField" destination="IY9-UC-bVi" id="G5P-7i-Dx8"/>
+                        <outlet property="typeAnywhere" destination="PSS-EZ-ZfV" id="Hjs-36-XqA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,6 +108,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="teste.png" width="727" height="187"/>
+        <image name="teste" width="727" height="187"/>
     </resources>
 </document>
