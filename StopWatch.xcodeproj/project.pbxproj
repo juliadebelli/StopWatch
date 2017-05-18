@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF69DE371EB1357600F871A1 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		DFC742CD1EAFE4B600310B77 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		DFF71CF41EA691B90023A7DE /* StopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF71CF71EA691B90023A7DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +141,7 @@
 		DFF71D251EA6922D0023A7DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF69DE371EB1357600F871A1 /* EventKit.framework */,
 				DFF71D2D1EA695F10023A7DE /* CoreLocation.framework */,
 				DFF71D261EA6922D0023A7DE /* MapKit.framework */,
 			);

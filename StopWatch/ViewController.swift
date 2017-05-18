@@ -9,10 +9,13 @@
 import UIKit
 import MapKit
 import CoreLocation
+import AVFoundation
+import UserNotifications
+import AudioToolbox
 
 class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate {
     
-    
+    var audioPlayer = AVAudioPlayer()
 
     // Map
     @IBOutlet weak var mapView: MKMapView!
@@ -44,8 +47,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDe
     @IBAction func getDestiny(_ sender: UITextField) {
         
         let DestinyText = sender.text
-        print(DestinyText ?? "")
         
+        let placemarks = [MKAnnotation]()
         
         CLGeocoder().geocodeAddressString(DestinyText!) { ( placemarks, error) in
             
@@ -54,13 +57,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDe
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = (placemark.location?.coordinate)!
                 self.mapView.addAnnotation(annotation)
-                
             }
             
+            /*if placemarks!.count > 1 {
+                let center = placemarks![0]
+                self.mapView.removeAnnotations([placemarks! as! MKAnnotation])
+            }*/
+            
+            let circularRegion = CLCircularRegion(center: (placemarks![0].location?.coordinate)!, radius: 500, identifier: "destino")
+            self.manager.startMonitoring(for: circularRegion)
+            circularRegion.notifyOnEntry = true
         }
-        
-        // Geofencing goes here
-        
         
     }
     
@@ -74,15 +81,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDe
         manager.requestAlwaysAuthorization()
         manager.startUpdatingLocation()
         
+        UNUserNotificationCenter.current().requestAuthorization(options: [ .alert, .sound, .badge]) { (bool, error) in
+            func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+                print("entrou na regiao")
+                let notification = UNMutableNotificationContent()
+                notification.title = "Destiny nearby"
+                notification.body = "You're 500 meters away from your destiny"
+                AudioServicesPlayAlertSound(SystemSoundID(1304))
+                
+                let trigger = UNLocationNotificationTrigger(region: region, repeats: false)
+                let request = UNNotificationRequest(identifier: "Region reached", content: notification, trigger: trigger)
+                
+                UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            }
+        }
         
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
     // Hides keyboard when user touches outside of it
@@ -91,12 +109,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDe
         if self.isTyping {
             self.view.endEditing(true)
             self.isTyping = false
-            typeAnywhere.isHidden = true
         } else {
             textField.becomeFirstResponder()
             self.isTyping = true
-            typeAnywhere.isHidden = false
         }
+
     }
     
 }
